@@ -83,10 +83,9 @@ if st.button("Generate Portifolio"):
             )
 
             st.plotly_chart(fig, use_container_width=True)
-                                           
-            st.line_chart(df, y=df.columns)
+            
         else:
-            st.error("Enter at least one ticker!")
+           st.error("Enter at least one ticker!")
 
       
         
