@@ -7,4 +7,4 @@ A Streamlit-based project that aims to predict future stock prices. Users can cr
 In this first version, its possíble to create a portfolio and check it's close price.
 
 Checkout the last features:
-[App Link]('https://stocks-forecasting-app-jamckf92spsrve3plmppc8.streamlit.app/')
+[App Link](https://stocks-forecasting-app-jamckf92spsrve3plmppc8.streamlit.app/)
