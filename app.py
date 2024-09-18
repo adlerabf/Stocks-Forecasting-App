@@ -11,6 +11,7 @@ st.title("Sotcks Price Forecasting App")
 def get_historical_data(tickers, start_date, end_date):
     data = yf.download(tickers, start=start_date, end=end_date)
     data.index = data.index.date
+    
     # The dataset has some keys, the code below drops those keys and also selects the Ajusted Close Price
     return data['Adj Close'].rename_axis(None, axis=1)
 
@@ -62,8 +63,8 @@ if st.button("Generate Portifolio"):
     # Obter os dados históricos
         df = get_historical_data(st.session_state.tickers_list, start_date, end_date)
         if df is not None:
-            # st.line_chart(df)
-            st.table(df)
+            df.index.name = "Date" # renaming the index, cause the code rename_axis(None, axis=1) removes the index name
+            st.write(df)
             fig = go.Figure()
 
             # Iterate over tickers in the session state
